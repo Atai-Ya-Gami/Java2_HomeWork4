@@ -23,8 +23,17 @@ public class Main {
         System.out.println("Список B: " + B);
         ArrayList <String> C = new ArrayList<>();
         A.addAll(B);
-        C = A;
-        Collections.shuffle(C);
+
+        C.add(A.get(0));
+        C.add(B.get(4));
+        C.add(A.get(1));
+        C.add(B.get(3));
+        C.add(A.get(2));
+        C.add(B.get(2));
+        C.add(A.get(3));
+        C.add(B.get(1));
+        C.add(A.get(4));
+        C.add(B.get(0));
         System.out.println(C);
 
         C.sort(Comparator.comparing(String::length));
